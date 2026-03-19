@@ -18,7 +18,7 @@ return new class extends Migration
                   ->constrained()
                   ->cascadeOnDelete();
 
-            $table->string('name');
+            $table->string('company');
             $table->string('role');
             $table->date('start_date');
             $table->date('end_date')->nullable();
