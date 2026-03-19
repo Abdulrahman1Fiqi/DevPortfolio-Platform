@@ -47,6 +47,41 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'is_active'=>'boolean',
         ];
     }
+
+    // Role helpers
+    public function isDeveloper():bool
+    {
+        return $this->role === 'developer';
+    }
+
+    public function isRecruiter():bool
+    {
+        return $this->role === 'recruiter';
+    }
+
+    public function isAdmin():bool
+    {
+        return $this->role === 'admin';
+    }
+
+    // Relationships
+    public function portfolio()
+    {
+        return $this->hasOne(Portfolio::class);
+    }
+
+    public function sentConnectionRequests()
+    {
+        return $this->hasMany(ConnectionRequest::class,'recruiter_id');
+    }
+
+    public function receivedConnectionRequests()
+    {
+        return $this->hasMany(ConnectionRequest::class,'developer_id');
+    }
+
+
 }
