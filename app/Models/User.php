@@ -84,4 +84,14 @@ class User extends Authenticatable
     }
 
 
+    // Helper method
+    public function dashboardRoute(): string
+    {
+        return match($this->role ){
+            'admin'=>'admin.dashboard',
+            'recruiter'=>'recruiter.dashboard',
+            'developer'=>'developer.dashboard',
+         };
+    }
+
 }
