@@ -91,6 +91,7 @@ class User extends Authenticatable
             'admin'=>'admin.dashboard',
             'recruiter'=>'recruiter.dashboard',
             'developer'=>'developer.dashboard',
+             default => 'home',
          };
     }
 
