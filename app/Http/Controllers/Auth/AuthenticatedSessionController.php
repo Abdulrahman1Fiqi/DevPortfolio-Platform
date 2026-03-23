@@ -25,10 +25,22 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request): RedirectResponse
     {
         $request->authenticate();
-
         $request->session()->regenerate();
+        
+        $user = Auth::user();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        if(! $user->is_active){
+            Auth::logout();
+            return back()->withErrors([
+                'email'=>'Your account has been suspended. Please contact support.',
+            ]);
+        }
+
+        return match($user->role){
+            'admin'=> redirect()->route('admin.dashboard'),
+            'recruiter'=> redirect()->route('recruiter.dashboard'),
+            'developer'=> redirect()->route('developer.dashboard'),
+        };
     }
 
     /**

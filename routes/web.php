@@ -5,11 +5,51 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+})->name('home');
+
+Route::get('/portfolio/{username}', function ($username) {
+    
+})->name('portfolio.show');
+
+
+
+// Developer routes
+
+Route::middleware(['auth','role:developer'])->prefix('dashboard')->name('developer.')->group(function(){
+
+    Route::get('/',function(){
+        return view('developer.dashboard');
+    })->name('dashboard');
+
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+
+// Recruiter routes
+
+Route::middleware(['auth','role:recruiter'])->prefix('recruiter')->name('recruiter.')->group(function(){
+
+    Route::get('/dashboard',function(){
+        return view('recruiter.dashboard');
+    })->name('dashboard');
+
+});
+
+
+
+// Admin routes
+
+Route::middleware(['auth','role:admin'])->prefix('admin')->name('admin.')->group(function(){
+
+    Route::get('/dashboard',function(){
+        return view('admin.dashboard');
+    })->name('dashboard');
+
+});
+
+
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
