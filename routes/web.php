@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Developer\DashboardController;
+use App\Http\Controllers\Developer\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,12 +16,23 @@ Route::get('/portfolio/{username}', function ($username) {
 
 // Developer routes
 
-Route::middleware(['auth','role:developer'])->prefix('dashboard')->name('developer.')->group(function(){
+Route::middleware(['auth','role:developer'])
+        ->prefix('dashboard')
+        ->name('developer.')
+        ->group(function(){
 
-    Route::get('/',function(){
-        return view('developer.dashboard');
-    })->name('dashboard');
+    Route::get('/',[DashboardController::class,'index'])
+        ->name('dashboard');
 
+    Route::get('/profile',[ProfileController::class,'edit'])
+        ->name('profile.edit');
+
+    Route::post('/profile',[ProfileController::class,'update'])
+        ->name('profile.update');
+
+    // Toggle published status
+    Route::patch('/portfolio/toggle-publish',[ProfileController::class,'togglePublish'])
+        ->name('portfolio.toggle-publish');
 });
 
 
