@@ -3,6 +3,7 @@
 use App\Http\Controllers\Developer\DashboardController;
 use App\Http\Controllers\Developer\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Developer\ProjectController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,6 +34,11 @@ Route::middleware(['auth','role:developer'])
     // Toggle published status
     Route::patch('/portfolio/toggle-publish',[ProfileController::class,'togglePublish'])
         ->name('portfolio.toggle-publish');
+
+    //Projects
+    Route::resource('projects',ProjectController::class)
+            ->except(['show']);
+
 });
 
 

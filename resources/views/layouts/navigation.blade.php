@@ -17,6 +17,14 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+
+                @if (auth()->user()->isDeveloper())
+                    <x-nav-link :href="route('developer.projects.index')" 
+                                :active="request()->routeIs('developer.projects.*')">
+                        {{ __('Projects') }}
+                    </x-nav-link>
+                @endif
+
             </div>
 
             <!-- Settings Dropdown -->
