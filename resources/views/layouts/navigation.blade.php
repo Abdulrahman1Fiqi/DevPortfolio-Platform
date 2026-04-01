@@ -23,6 +23,16 @@
                                 :active="request()->routeIs('developer.projects.*')">
                         {{ __('Projects') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('developer.skills.index')"
+                                :active="request()->routeIs('developer.skills.*')">
+                        {{ __('Skills') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('developer.experience.index')"
+                                :active="request()->routeIs('developer.experience.*')">
+                        {{ __('Experience') }}
+                    </x-nav-link>
                 @endif
 
             </div>

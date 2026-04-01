@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\Developer\DashboardController;
 use App\Http\Controllers\Developer\ProfileController;
+use App\Http\Controllers\Developer\SkillController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Developer\ProjectController;
+use App\Http\Controllers\Developer\ExperienceController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,6 +39,14 @@ Route::middleware(['auth','role:developer'])
 
     //Projects
     Route::resource('projects',ProjectController::class)
+            ->except(['show']);
+
+    // Skills
+    Route::resource('skills',SkillController::class)
+            ->only(['index','store','destroy']);
+
+    // Experience
+    Route::resource('experience', ExperienceController::class)
             ->except(['show']);
 
 });
