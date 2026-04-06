@@ -6,15 +6,23 @@ use App\Http\Controllers\Developer\SkillController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Developer\ProjectController;
 use App\Http\Controllers\Developer\ExperienceController;
+use App\Http\Controllers\Public\PortfolioController;
+use App\Http\Controllers\Public\AnalyticsController;
+use App\Http\Controllers\Public\DeveloperDirectoryController;
+
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/portfolio/{username}', function ($username) {
-    
-})->name('portfolio.show');
+Route::get('/portfolio/{username}', [PortfolioController::class, 'show'])
+        ->name('portfolio.show');
 
+Route::post('/analytics/track',[AnalyticsController::class,'track'])
+        ->name('analytics.track');
+
+Route::get('/developers',[DeveloperDirectoryController::class,'index'])
+        ->name('developers.index');
 
 
 // Developer routes
