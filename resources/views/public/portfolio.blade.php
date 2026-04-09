@@ -347,17 +347,74 @@
         {{-- ── CONNECT BUTTON (for recruiters) ─────────────────── --}}
         @auth
             @if(auth()->user()->isRecruiter())
-                <section class="text-center py-8">
-                    <p class="text-gray-600 mb-4">
-                        Interested in {{ $user->name }}?
-                    </p>
-                    {{-- We'll wire this up in Step 8 --}}
-                    <a href="#connect"
-                       class="bg-indigo-600 text-white px-8 py-3
-                              rounded-lg font-medium hover:bg-indigo-700
-                              transition inline-block">
-                        Send Connection Request
-                    </a>
+                @php
+                    // Check if a request was already sent
+                    $existingRequest = \App\Models\ConnectionRequest::where('recruiter_id', auth()->id())
+                        ->where('developer_id', $user->id)
+                        ->first();
+                @endphp
+
+                <section class="bg-white border border-gray-200 rounded-xl p-6
+                                text-center" id="connect">
+
+                    @if($existingRequest)
+                        {{-- Already sent — show status --}}
+                        <p class="text-gray-600 font-medium">
+                            Connection Request Status:
+                            <span class="font-semibold
+                                {{ $existingRequest->isPending()  ? 'text-yellow-600' : '' }}
+                                {{ $existingRequest->isAccepted() ? 'text-green-600'  : '' }}
+                                {{ $existingRequest->isDeclined() ? 'text-red-600'    : '' }}">
+                                {{ ucfirst($existingRequest->status) }}
+                            </span>
+                        </p>
+
+                        @if($existingRequest->isPending())
+                            <p class="text-sm text-gray-500 mt-1">
+                                Waiting for {{ $user->name }} to respond.
+                            </p>
+                        @elseif($existingRequest->isAccepted())
+                            <p class="text-sm text-green-600 mt-1">
+                                📧 You can now contact them at:
+                                <strong>{{ $user->email }}</strong>
+                            </p>
+                        @endif
+
+                    @else
+                        {{-- No request yet — show the form --}}
+                        <h3 class="font-semibold text-gray-900 mb-1">
+                            Interested in {{ $user->name }}?
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-4">
+                            Send a connection request to get in touch.
+                        </p>
+
+                        <form method="POST"
+                            action="{{ route('connections.store', $user->username) }}">
+                            @csrf
+
+                            <textarea name="message"
+                                    rows="3"
+                                    maxlength="500"
+                                    placeholder="Introduce yourself and explain the opportunity... (optional)"
+                                    class="w-full border border-gray-200 rounded-lg p-3
+                                            text-sm text-gray-700 resize-none
+                                            focus:ring-indigo-500 focus:border-indigo-500
+                                            mb-3">{{ old('message') }}</textarea>
+
+                            @error('message')
+                                <p class="text-red-600 text-xs mb-2">{{ $message }}</p>
+                            @enderror
+
+                            <button type="submit"
+                                    class="w-full bg-indigo-600 text-white py-2.5
+                                        rounded-lg font-medium hover:bg-indigo-700
+                                        transition text-sm">
+                                Send Connection Request
+                            </button>
+                        </form>
+                    @endif
+
                 </section>
             @endif
         @endauth

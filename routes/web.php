@@ -9,6 +9,8 @@ use App\Http\Controllers\Developer\ExperienceController;
 use App\Http\Controllers\Public\PortfolioController;
 use App\Http\Controllers\Public\AnalyticsController;
 use App\Http\Controllers\Public\DeveloperDirectoryController;
+use App\Http\Controllers\Recruiter\ConnectionController as RecruiterConnectionController;
+use App\Http\Controllers\Developer\ConnectionController as DeveloperConnectionController; 
 
 
 Route::get('/', function () {
@@ -24,6 +26,9 @@ Route::post('/analytics/track',[AnalyticsController::class,'track'])
 Route::get('/developers',[DeveloperDirectoryController::class,'index'])
         ->name('developers.index');
 
+Route::post('/connections/{username}',[RecruiterConnectionController::class,'store'])
+        ->middleware(['auth','role:recruiter'])
+        ->name('connections.store');
 
 // Developer routes
 
@@ -57,6 +62,18 @@ Route::middleware(['auth','role:developer'])
     Route::resource('experience', ExperienceController::class)
             ->except(['show']);
 
+    // Connections
+    Route::get('/connections',[DeveloperConnectionController::class,'index'])
+            ->name('connections.index');
+
+    Route::patch('/connections/{connection}/accept',
+                    [DeveloperConnectionController::class,'accept'])
+            ->name('connections.accept');
+
+    Route::patch('/connections/{connection}/decline',
+                    [DeveloperConnectionController::class,'decline'])
+            ->name('connections.decline');
+
 });
 
 
@@ -69,6 +86,12 @@ Route::middleware(['auth','role:recruiter'])->prefix('recruiter')->name('recruit
         return view('recruiter.dashboard');
     })->name('dashboard');
 
+    // Connections
+    Route::get('/connections',[RecruiterConnectionController::class,'index'])
+            ->name('connections.index');
+
+    Route::delete('/connections/{id}',[RecruiterConnectionController::class,'destroy'])
+            ->name('connections.destroy');
 });
 
 

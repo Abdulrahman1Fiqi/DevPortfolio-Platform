@@ -16,9 +16,8 @@
                     <x-nav-link :href=" route(auth()->user()->dashboardRoute())" :active="request()->routeIs(auth()->user()->dashboardRoute())">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                </div>
 
-                @if (auth()->user()->isDeveloper())
+                    @if (auth()->user()->isDeveloper())
                     <x-nav-link :href="route('developer.projects.index')" 
                                 :active="request()->routeIs('developer.projects.*')">
                         {{ __('Projects') }}
@@ -33,8 +32,34 @@
                                 :active="request()->routeIs('developer.experience.*')">
                         {{ __('Experience') }}
                     </x-nav-link>
-                @endif
 
+                    <x-nav-link :href="route('developer.connections.index')"
+                                :active="request()->routeIs('developer.connections.*')">
+                        {{ __('Connections') }}
+                        @php
+                            $pendingCount = auth()->user()
+                                ->receivedConnectionRequests()
+                                ->where('status', 'pending')
+                                ->count();
+                        @endphp
+                        @if($pendingCount > 0)
+                            <span class="ml-1 bg-red-500 text-white text-xs
+                                        font-bold px-1.5 py-0.5 rounded-full">
+                                {{ $pendingCount }}
+                            </span>
+                        @endif
+                    </x-nav-link>
+                    @endif
+
+                    {{-- Recruiter nav --}}
+                    @if(auth()->user()->isRecruiter())
+                        <x-nav-link :href="route('recruiter.connections.index')"
+                                    :active="request()->routeIs('recruiter.connections.*')">
+                            {{ __('My Requests') }}
+                        </x-nav-link>
+                    @endif
+
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
