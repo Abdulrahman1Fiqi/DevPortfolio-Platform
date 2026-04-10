@@ -49,6 +49,12 @@
                             </span>
                         @endif
                     </x-nav-link>
+
+                    <x-nav-link :href="route('developer.analytics.index')"
+                                :active="request()->routeIs('developer.analytics.*')">
+                        {{ __('Analytics') }}
+                    </x-nav-link>
+
                     @endif
 
                     {{-- Recruiter nav --}}

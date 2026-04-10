@@ -7,10 +7,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Developer\ProjectController;
 use App\Http\Controllers\Developer\ExperienceController;
 use App\Http\Controllers\Public\PortfolioController;
-use App\Http\Controllers\Public\AnalyticsController;
+use App\Http\Controllers\Public\AnalyticsController as PublicAnalyticsController;
 use App\Http\Controllers\Public\DeveloperDirectoryController;
 use App\Http\Controllers\Recruiter\ConnectionController as RecruiterConnectionController;
 use App\Http\Controllers\Developer\ConnectionController as DeveloperConnectionController; 
+use App\Http\Controllers\Developer\AnalyticsController;
 
 
 Route::get('/', function () {
@@ -20,7 +21,7 @@ Route::get('/', function () {
 Route::get('/portfolio/{username}', [PortfolioController::class, 'show'])
         ->name('portfolio.show');
 
-Route::post('/analytics/track',[AnalyticsController::class,'track'])
+Route::post('/analytics/track',[PublicAnalyticsController::class,'track'])
         ->name('analytics.track');
 
 Route::get('/developers',[DeveloperDirectoryController::class,'index'])
@@ -73,6 +74,10 @@ Route::middleware(['auth','role:developer'])
     Route::patch('/connections/{connection}/decline',
                     [DeveloperConnectionController::class,'decline'])
             ->name('connections.decline');
+
+    // Analytics
+    Route::get('/analytics',[AnalyticsController::class, 'index'])
+            ->name('analytics.index');
 
 });
 
