@@ -12,6 +12,9 @@ use App\Http\Controllers\Public\DeveloperDirectoryController;
 use App\Http\Controllers\Recruiter\ConnectionController as RecruiterConnectionController;
 use App\Http\Controllers\Developer\ConnectionController as DeveloperConnectionController; 
 use App\Http\Controllers\Developer\AnalyticsController;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\UserController as AdminUserController;
+use App\Http\Controllers\Admin\PortfolioController as AdminPortfolioController;
 
 
 Route::get('/', function () {
@@ -103,12 +106,38 @@ Route::middleware(['auth','role:recruiter'])->prefix('recruiter')->name('recruit
 
 // Admin routes
 
-Route::middleware(['auth','role:admin'])->prefix('admin')->name('admin.')->group(function(){
+Route::middleware(['auth','role:admin'])
+        ->prefix('admin')
+        ->name('admin.')
+        ->group(function(){
 
-    Route::get('/dashboard',function(){
-        return view('admin.dashboard');
-    })->name('dashboard');
+    // Dashboard
+    Route::get('/dashboard',[AdminDashboardController::class, 'index'])
+        ->name('dashboard');
 
+   // Users
+   Route::get('/users',[AdminUserController::class,'index'])
+        ->name('users.index');
+
+   Route::get('/users/{user}',[AdminUserController::class,'show'])
+        ->name('users.show');
+
+   Route::patch('/users/{user}/suspend',[AdminUserController::class,'suspend'])
+        ->name('users.suspend');
+
+   Route::patch('/users/{user}/activate',[AdminUserController::class,'activate'])
+        ->name('users.activate');
+
+   Route::delete('/users/{user}',[AdminUserController::class,'destroy'])
+        ->name('users.destroy');
+
+   // Portfolios
+   Route::get('/portfolios',[AdminPortfolioController::class, 'index'])
+        ->name('portfolios.index');
+
+   Route::patch('/portfolios/{portfolio}/unpublish',
+                [AdminPortfolioController::class,'unpublish'])
+        ->name('portfolios.unpublish');
 });
 
 
