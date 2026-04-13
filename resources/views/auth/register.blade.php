@@ -1,122 +1,157 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+
+    <h2 class="text-xl font-bold text-gray-900 mb-1">Create your account</h2>
+    <p class="text-sm text-gray-500 mb-6">Start building your developer portfolio</p>
+
+    <form method="POST" action="{{ route('register') }}" class="space-y-4">
         @csrf
 
         {{-- Name --}}
         <div>
-            <x-input-label for="name" :value="__('Full Name')" />
-            <x-text-input id="name"
-                class="block mt-1 w-full"
-                type="text"
-                name="name"
-                :value="old('name')"
-                required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">
+                Full Name
+            </label>
+            <input type="text"
+                   name="name"
+                   value="{{ old('name') }}"
+                   required autofocus autocomplete="name"
+                   placeholder="John Doe"
+                   class="input-field" />
+            @error('name')
+                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+            @enderror
         </div>
 
         {{-- Username --}}
-        <div class="mt-4">
-            <x-input-label for="username" :value="__('Username')" />
-            <x-text-input id="username"
-                class="block mt-1 w-full"
-                type="text"
-                name="username"
-                :value="old('username')"
-                required />
-            {{-- Shows the public URL they will get --}}
-            <p class="text-xs text-gray-500 mt-1">
-                Your portfolio will be at:
-                <span class="font-mono">
-                    {{ url('/portfolio') }}/{{ old('username') ?? 'username' }}
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">
+                Username
+            </label>
+            <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center
+                             text-gray-400 text-sm pointer-events-none">
+                    /portfolio/
                 </span>
-            </p>
-            <x-input-error :messages="$errors->get('username')" class="mt-2" />
+                <input type="text"
+                       name="username"
+                       id="username"
+                       value="{{ old('username') }}"
+                       required
+                       placeholder="johndoe"
+                       class="input-field pl-[5.5rem]" />
+            </div>
+            @error('username')
+                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+            @enderror
         </div>
 
         {{-- Email --}}
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email"
-                class="block mt-1 w-full"
-                type="email"
-                name="email"
-                :value="old('email')"
-                required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">
+                Email address
+            </label>
+            <input type="email"
+                   name="email"
+                   value="{{ old('email') }}"
+                   required autocomplete="username"
+                   placeholder="john@example.com"
+                   class="input-field" />
+            @error('email')
+                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+            @enderror
         </div>
 
-        {{-- Role Selection --}}
-        <div class="mt-4">
-            <x-input-label :value="__('I am a...')" />
-            <div class="mt-2 flex gap-4">
+        {{-- Role selector --}}
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">
+                I am joining as a...
+            </label>
+            <div class="grid grid-cols-2 gap-3">
 
-                {{-- Developer option --}}
-                <label class="flex-1 cursor-pointer">
-                    <input type="radio"
-                        name="role"
-                        value="developer"
-                        class="sr-only peer"
-                        {{ old('role', 'developer') === 'developer' ? 'checked' : '' }} />
-                    <div class="border-2 rounded-lg p-3 text-center text-sm font-medium
-                                peer-checked:border-indigo-500 peer-checked:bg-indigo-50
-                                peer-checked:text-indigo-700 border-gray-200 text-gray-600
-                                transition-all">
-                        Developer
-                        <p class="text-xs font-normal mt-1">I want a portfolio</p>
+                <label class="cursor-pointer">
+                    <input type="radio" name="role" value="developer"
+                           class="sr-only peer"
+                           {{ old('role', 'developer') === 'developer' ? 'checked' : '' }} />
+                    <div class="border-2 border-gray-200 rounded-xl p-3
+                                peer-checked:border-indigo-500
+                                peer-checked:bg-indigo-50
+                                transition-all text-center">
+                        <div class="text-2xl mb-1">👨‍💻</div>
+                        <p class="text-sm font-semibold text-gray-800">
+                            Developer
+                        </p>
+                        <p class="text-xs text-gray-500 mt-0.5">
+                            I want a portfolio
+                        </p>
                     </div>
                 </label>
 
-                {{-- Recruiter option --}}
-                <label class="flex-1 cursor-pointer">
-                    <input type="radio"
-                        name="role"
-                        value="recruiter"
-                        class="sr-only peer"
-                        {{ old('role') === 'recruiter' ? 'checked' : '' }} />
-                    <div class="border-2 rounded-lg p-3 text-center text-sm font-medium
-                                peer-checked:border-indigo-500 peer-checked:bg-indigo-50
-                                peer-checked:text-indigo-700 border-gray-200 text-gray-600
-                                transition-all">
-                        Recruiter
-                        <p class="text-xs font-normal mt-1">I want to hire</p>
+                <label class="cursor-pointer">
+                    <input type="radio" name="role" value="recruiter"
+                           class="sr-only peer"
+                           {{ old('role') === 'recruiter' ? 'checked' : '' }} />
+                    <div class="border-2 border-gray-200 rounded-xl p-3
+                                peer-checked:border-indigo-500
+                                peer-checked:bg-indigo-50
+                                transition-all text-center">
+                        <div class="text-2xl mb-1">🔍</div>
+                        <p class="text-sm font-semibold text-gray-800">
+                            Recruiter
+                        </p>
+                        <p class="text-xs text-gray-500 mt-0.5">
+                            I want to hire
+                        </p>
                     </div>
                 </label>
 
             </div>
-            <x-input-error :messages="$errors->get('role')" class="mt-2" />
+            @error('role')
+                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+            @enderror
         </div>
 
         {{-- Password --}}
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-            <x-text-input id="password"
-                class="block mt-1 w-full"
-                type="password"
-                name="password"
-                required autocomplete="new-password" />
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">
+                Password
+            </label>
+            <input type="password"
+                   name="password"
+                   required autocomplete="new-password"
+                   class="input-field" />
+            @error('password')
+                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+            @enderror
         </div>
 
         {{-- Confirm Password --}}
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-            <x-text-input id="password_confirmation"
-                class="block mt-1 w-full"
-                type="password"
-                name="password_confirmation"
-                required autocomplete="new-password" />
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">
+                Confirm Password
+            </label>
+            <input type="password"
+                   name="password_confirmation"
+                   required autocomplete="new-password"
+                   class="input-field" />
+            @error('password_confirmation')
+                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+            @enderror
         </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900"
-               href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
+        {{-- Submit --}}
+        <button type="submit" class="btn-primary w-full mt-2">
+            Create Account
+        </button>
 
     </form>
+
+    {{-- Login link --}}
+    <p class="text-center text-sm text-gray-500 mt-6">
+        Already have an account?
+        <a href="{{ route('login') }}"
+           class="text-indigo-600 font-medium hover:underline">
+            Sign in
+        </a>
+    </p>
+
 </x-guest-layout>

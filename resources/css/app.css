@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        --brand-primary:   #6366f1; /* indigo-500 */
+        --brand-dark:      #4338ca; /* indigo-700 */
+        --brand-light:     #e0e7ff; /* indigo-100 */
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-indigo-600 text-white px-6 py-2.5 rounded-lg font-medium
+               hover:bg-indigo-700 transition-all duration-200
+               focus:outline-none focus:ring-2 focus:ring-indigo-500
+               focus:ring-offset-2 disabled:opacity-50;
+    }
+
+    .btn-secondary {
+        @apply bg-white text-indigo-600 px-6 py-2.5 rounded-lg font-medium
+               border border-indigo-200 hover:bg-indigo-50
+               transition-all duration-200;
+    }
+
+    .input-field {
+        @apply w-full border border-gray-200 rounded-lg px-4 py-2.5
+               text-gray-800 placeholder-gray-400 text-sm
+               focus:outline-none focus:ring-2 focus:ring-indigo-400
+               focus:border-transparent transition;
+    }
+
+    .card {
+        @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-6;
+    }
+}
