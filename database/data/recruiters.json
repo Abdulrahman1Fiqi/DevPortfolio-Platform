@@ -1,0 +1,16 @@
+{
+    "recruiters": [
+        {
+            "name": "Sarah Mitchell",
+            "email": "sarah.mitchell@techhire.com"
+        },
+        {
+            "name": "James Al-Rashid",
+            "email": "james.alrashid@devtalent.io"
+        },
+        {
+            "name": "Layla Mostafa",
+            "email": "layla.mostafa@cairotalent.eg"
+        }
+    ]
+}

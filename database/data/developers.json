@@ -1,0 +1,649 @@
+{
+    "developers": [
+        {
+            "name": "Ahmed Hassan",
+            "username": "ahmedhassan",
+            "email": "ahmed.hassan@example.com",
+            "portfolio": {
+                "headline": "Full Stack Laravel Developer",
+                "bio": "Passionate full stack developer with 5+ years of experience building scalable web applications. I love clean code, good architecture, and solving complex problems with elegant solutions.",
+                "location": "Cairo, Egypt",
+                "social_links": {
+                    "github": "https://github.com/ahmedhassan",
+                    "linkedin": "https://linkedin.com/in/ahmedhassan",
+                    "website": "https://ahmedhassan.dev"
+                }
+            },
+            "skills": [
+                { "name": "PHP",        "category": "Languages",   "proficiency": "Expert" },
+                { "name": "JavaScript", "category": "Languages",   "proficiency": "Advanced" },
+                { "name": "Python",     "category": "Languages",   "proficiency": "Intermediate" },
+                { "name": "Laravel",    "category": "Frameworks",  "proficiency": "Expert" },
+                { "name": "Vue.js",     "category": "Frameworks",  "proficiency": "Advanced" },
+                { "name": "MySQL",      "category": "Databases",   "proficiency": "Expert" },
+                { "name": "Redis",      "category": "Databases",   "proficiency": "Intermediate" },
+                { "name": "Docker",     "category": "Tools",       "proficiency": "Advanced" },
+                { "name": "Git",        "category": "Tools",       "proficiency": "Expert" }
+            ],
+            "experiences": [
+                {
+                    "company": "TechVision Egypt",
+                    "role": "Senior Full Stack Developer",
+                    "start_date": "2021-03-01",
+                    "end_date": null,
+                    "description": "Leading development of enterprise SaaS platform. Architected microservices backend with Laravel and built responsive frontend with Vue.js. Reduced page load times by 60% through performance optimization."
+                },
+                {
+                    "company": "Digital Agency Cairo",
+                    "role": "Full Stack Developer",
+                    "start_date": "2019-01-01",
+                    "end_date": "2021-02-28",
+                    "description": "Built and maintained 15+ client web applications. Collaborated with design team to implement pixel-perfect UIs. Integrated third-party APIs including payment gateways and shipping providers."
+                }
+            ],
+            "projects": [
+                {
+                    "title": "ShopEasy E-Commerce Platform",
+                    "description": "A full-featured e-commerce platform with multi-vendor support, real-time inventory management, and integrated payment processing. Handles 10,000+ daily active users.",
+                    "tech_stack": ["Laravel", "Vue.js", "MySQL", "Redis", "Stripe API"],
+                    "demo_url": "https://shopeasy-demo.example.com",
+                    "repo_url": "https://github.com/ahmedhassan/shopeasy",
+                    "is_featured": true
+                },
+                {
+                    "title": "Task Management API",
+                    "description": "RESTful API for task and project management with real-time notifications, team collaboration features, and detailed analytics dashboard.",
+                    "tech_stack": ["Laravel", "MySQL", "Redis", "Laravel Echo"],
+                    "demo_url": null,
+                    "repo_url": "https://github.com/ahmedhassan/task-api",
+                    "is_featured": false
+                },
+                {
+                    "title": "Real Estate Listings App",
+                    "description": "Property listing platform with advanced search filters, map integration, and mortgage calculator. Built for a major Egyptian real estate company.",
+                    "tech_stack": ["Laravel", "Vue.js", "PostgreSQL", "Google Maps API"],
+                    "demo_url": "https://realestate-demo.example.com",
+                    "repo_url": null,
+                    "is_featured": false
+                }
+            ],
+            "testimonials": [
+                {
+                    "submitter_name": "Omar Khalil",
+                    "submitter_role": "CTO",
+                    "company": "TechVision Egypt",
+                    "message": "Ahmed is one of the most talented developers I have worked with. His ability to deliver clean, well-structured code on tight deadlines is impressive. Highly recommended.",
+                    "rating": 5,
+                    "is_approved": true
+                },
+                {
+                    "submitter_name": "Sara Nasser",
+                    "submitter_role": "Project Manager",
+                    "company": "Digital Agency Cairo",
+                    "message": "Working with Ahmed was a great experience. He consistently delivered high-quality work and was always proactive in suggesting improvements.",
+                    "rating": 5,
+                    "is_approved": true
+                }
+            ]
+        },
+        {
+            "name": "Fatima Al-Zahra",
+            "username": "fatima_dev",
+            "email": "fatima.alzahra@example.com",
+            "portfolio": {
+                "headline": "React & Node.js Developer",
+                "bio": "Frontend-focused developer who loves building beautiful, accessible user experiences. I specialize in React ecosystem and have a strong eye for design and performance.",
+                "location": "Alexandria, Egypt",
+                "social_links": {
+                    "github": "https://github.com/fatima_dev",
+                    "linkedin": "https://linkedin.com/in/fatima-alzahra",
+                    "website": null
+                }
+            },
+            "skills": [
+                { "name": "JavaScript", "category": "Languages",   "proficiency": "Expert" },
+                { "name": "TypeScript", "category": "Languages",   "proficiency": "Advanced" },
+                { "name": "HTML5",      "category": "Languages",   "proficiency": "Expert" },
+                { "name": "CSS3",       "category": "Languages",   "proficiency": "Expert" },
+                { "name": "React.js",   "category": "Frameworks",  "proficiency": "Expert" },
+                { "name": "Next.js",    "category": "Frameworks",  "proficiency": "Advanced" },
+                { "name": "Node.js",    "category": "Frameworks",  "proficiency": "Intermediate" },
+                { "name": "MongoDB",    "category": "Databases",   "proficiency": "Intermediate" },
+                { "name": "Figma",      "category": "Tools",       "proficiency": "Advanced" },
+                { "name": "Git",        "category": "Tools",       "proficiency": "Expert" }
+            ],
+            "experiences": [
+                {
+                    "company": "Cedarwood Tech",
+                    "role": "Senior Frontend Developer",
+                    "start_date": "2022-01-01",
+                    "end_date": null,
+                    "description": "Building the company's main customer portal using React and TypeScript. Implemented component library used across 3 products. Achieved 98% accessibility score on all pages."
+                },
+                {
+                    "company": "Freelance",
+                    "role": "Frontend Developer",
+                    "start_date": "2020-06-01",
+                    "end_date": "2021-12-31",
+                    "description": "Worked with 12+ clients building custom web applications and landing pages. Specialized in converting Figma designs to pixel-perfect React components."
+                }
+            ],
+            "projects": [
+                {
+                    "title": "UI Component Library",
+                    "description": "Open-source React component library with 50+ accessible components, dark mode support, and full TypeScript types. 800+ GitHub stars.",
+                    "tech_stack": ["React.js", "TypeScript", "Storybook", "Tailwind CSS"],
+                    "demo_url": "https://ui-lib-demo.example.com",
+                    "repo_url": "https://github.com/fatima_dev/ui-components",
+                    "is_featured": true
+                },
+                {
+                    "title": "Personal Finance Dashboard",
+                    "description": "Beautiful and intuitive finance tracking app with expense categories, monthly reports, and budget goals. Built with Next.js and Chart.js.",
+                    "tech_stack": ["Next.js", "TypeScript", "Chart.js", "MongoDB"],
+                    "demo_url": "https://finance-dash.example.com",
+                    "repo_url": "https://github.com/fatima_dev/finance-dashboard",
+                    "is_featured": false
+                }
+            ],
+            "testimonials": [
+                {
+                    "submitter_name": "Karim Mansour",
+                    "submitter_role": "Engineering Lead",
+                    "company": "Cedarwood Tech",
+                    "message": "Fatima built our entire design system from scratch. The quality of her work is outstanding — every component is accessible, well-documented, and a joy to use.",
+                    "rating": 5,
+                    "is_approved": true
+                }
+            ]
+        },
+        {
+            "name": "Youssef Amr",
+            "username": "youssef_amr",
+            "email": "youssef.amr@example.com",
+            "portfolio": {
+                "headline": "DevOps & Cloud Engineer",
+                "bio": "Infrastructure engineer passionate about automation, reliability, and developer experience. I help teams ship faster and sleep better at night by building robust CI/CD pipelines and cloud architectures.",
+                "location": "Giza, Egypt",
+                "social_links": {
+                    "github": "https://github.com/youssefamr",
+                    "linkedin": "https://linkedin.com/in/youssefamr",
+                    "website": null
+                }
+            },
+            "skills": [
+                { "name": "Python",      "category": "Languages",   "proficiency": "Advanced" },
+                { "name": "Bash",        "category": "Languages",   "proficiency": "Advanced" },
+                { "name": "Go",          "category": "Languages",   "proficiency": "Intermediate" },
+                { "name": "Docker",      "category": "Tools",       "proficiency": "Expert" },
+                { "name": "Kubernetes",  "category": "Tools",       "proficiency": "Advanced" },
+                { "name": "Terraform",   "category": "Tools",       "proficiency": "Advanced" },
+                { "name": "AWS",         "category": "Tools",       "proficiency": "Expert" },
+                { "name": "Jenkins",     "category": "Tools",       "proficiency": "Advanced" },
+                { "name": "PostgreSQL",  "category": "Databases",   "proficiency": "Intermediate" }
+            ],
+            "experiences": [
+                {
+                    "company": "CloudFirst Solutions",
+                    "role": "Senior DevOps Engineer",
+                    "start_date": "2020-09-01",
+                    "end_date": null,
+                    "description": "Managing AWS infrastructure for 8 client applications totalling 2M+ monthly users. Reduced deployment time from 45 minutes to under 5 minutes through CI/CD automation. Cut infrastructure costs by 35% via resource optimization."
+                },
+                {
+                    "company": "Startup Hub Egypt",
+                    "role": "DevOps Engineer",
+                    "start_date": "2018-03-01",
+                    "end_date": "2020-08-31",
+                    "description": "Built and maintained CI/CD pipelines for 5 startups. Migrated legacy applications to containerized environments. Implemented monitoring and alerting systems."
+                }
+            ],
+            "projects": [
+                {
+                    "title": "Kubernetes Auto-Scaler",
+                    "description": "Open-source tool that automatically scales Kubernetes deployments based on custom metrics from business logic, not just CPU/memory. Used in production by 3 companies.",
+                    "tech_stack": ["Go", "Kubernetes", "Prometheus", "Docker"],
+                    "demo_url": null,
+                    "repo_url": "https://github.com/youssefamr/k8s-autoscaler",
+                    "is_featured": true
+                },
+                {
+                    "title": "Infrastructure as Code Templates",
+                    "description": "Collection of production-ready Terraform modules for AWS. Covers VPC, ECS, RDS, CloudFront, and more with security best practices built in.",
+                    "tech_stack": ["Terraform", "AWS", "Python"],
+                    "demo_url": null,
+                    "repo_url": "https://github.com/youssefamr/terraform-modules",
+                    "is_featured": false
+                }
+            ],
+            "testimonials": [
+                {
+                    "submitter_name": "Nour Ibrahim",
+                    "submitter_role": "VP of Engineering",
+                    "company": "CloudFirst Solutions",
+                    "message": "Youssef transformed our deployment process entirely. What used to take hours is now done in minutes with zero downtime. His infrastructure work is world class.",
+                    "rating": 5,
+                    "is_approved": true
+                }
+            ]
+        },
+        {
+            "name": "Nada Salah",
+            "username": "nada_salah",
+            "email": "nada.salah@example.com",
+            "portfolio": {
+                "headline": "Mobile Developer — React Native & Flutter",
+                "bio": "Mobile-first developer with a passion for smooth animations and great user experiences. I build cross-platform apps that feel native on both iOS and Android.",
+                "location": "Cairo, Egypt",
+                "social_links": {
+                    "github": "https://github.com/nadasalah",
+                    "linkedin": "https://linkedin.com/in/nada-salah",
+                    "website": "https://nadasalah.io"
+                }
+            },
+            "skills": [
+                { "name": "JavaScript",    "category": "Languages",   "proficiency": "Expert" },
+                { "name": "TypeScript",    "category": "Languages",   "proficiency": "Advanced" },
+                { "name": "Dart",          "category": "Languages",   "proficiency": "Advanced" },
+                { "name": "React Native",  "category": "Frameworks",  "proficiency": "Expert" },
+                { "name": "Flutter",       "category": "Frameworks",  "proficiency": "Advanced" },
+                { "name": "Firebase",      "category": "Databases",   "proficiency": "Advanced" },
+                { "name": "SQLite",        "category": "Databases",   "proficiency": "Intermediate" },
+                { "name": "Xcode",         "category": "Tools",       "proficiency": "Intermediate" },
+                { "name": "Android Studio","category": "Tools",       "proficiency": "Intermediate" }
+            ],
+            "experiences": [
+                {
+                    "company": "AppFactory Cairo",
+                    "role": "Senior Mobile Developer",
+                    "start_date": "2021-06-01",
+                    "end_date": null,
+                    "description": "Leading mobile development for the company's flagship app with 200K+ downloads on both stores. Implemented complex animations using Reanimated. Maintained 4.8-star average rating across iOS and Android."
+                },
+                {
+                    "company": "Mobile First Agency",
+                    "role": "React Native Developer",
+                    "start_date": "2019-02-01",
+                    "end_date": "2021-05-31",
+                    "description": "Built 10+ client mobile applications from scratch to App Store submission. Specialized in integrating device hardware features — camera, GPS, biometrics, and push notifications."
+                }
+            ],
+            "projects": [
+                {
+                    "title": "FitTrack — Fitness App",
+                    "description": "Cross-platform fitness tracking app with workout logging, progress charts, calorie tracking, and social challenges. 50K+ downloads with 4.7 star rating.",
+                    "tech_stack": ["React Native", "TypeScript", "Firebase", "Reanimated"],
+                    "demo_url": "https://fittrack.example.com",
+                    "repo_url": "https://github.com/nadasalah/fittrack",
+                    "is_featured": true
+                },
+                {
+                    "title": "Delivery Tracker App",
+                    "description": "Real-time delivery tracking application with live map updates, push notifications, and driver-customer chat. Built for a food delivery startup.",
+                    "tech_stack": ["Flutter", "Dart", "Firebase", "Google Maps"],
+                    "demo_url": null,
+                    "repo_url": null,
+                    "is_featured": false
+                }
+            ],
+            "testimonials": [
+                {
+                    "submitter_name": "Tarek Fouad",
+                    "submitter_role": "Product Manager",
+                    "company": "AppFactory Cairo",
+                    "message": "Nada's attention to detail in mobile UX is unmatched. She always thinks from the user's perspective and the result is apps that people actually love to use.",
+                    "rating": 5,
+                    "is_approved": true
+                }
+            ]
+        },
+        {
+            "name": "Khaled Omar",
+            "username": "khaled_omar",
+            "email": "khaled.omar@example.com",
+            "portfolio": {
+                "headline": "Backend Engineer — Laravel & Node.js",
+                "bio": "Backend developer specializing in high-performance APIs and database design. I care deeply about code quality, testing, and building systems that are easy to maintain and scale.",
+                "location": "Mansoura, Egypt",
+                "social_links": {
+                    "github": "https://github.com/khaledomar",
+                    "linkedin": "https://linkedin.com/in/khaled-omar",
+                    "website": null
+                }
+            },
+            "skills": [
+                { "name": "PHP",         "category": "Languages",   "proficiency": "Expert" },
+                { "name": "JavaScript",  "category": "Languages",   "proficiency": "Advanced" },
+                { "name": "Python",      "category": "Languages",   "proficiency": "Intermediate" },
+                { "name": "Laravel",     "category": "Frameworks",  "proficiency": "Expert" },
+                { "name": "Node.js",     "category": "Frameworks",  "proficiency": "Advanced" },
+                { "name": "MySQL",       "category": "Databases",   "proficiency": "Expert" },
+                { "name": "PostgreSQL",  "category": "Databases",   "proficiency": "Advanced" },
+                { "name": "Redis",       "category": "Databases",   "proficiency": "Advanced" },
+                { "name": "Git",         "category": "Tools",       "proficiency": "Expert" },
+                { "name": "PHPUnit",     "category": "Tools",       "proficiency": "Advanced" }
+            ],
+            "experiences": [
+                {
+                    "company": "Fintech Arabia",
+                    "role": "Senior Backend Engineer",
+                    "start_date": "2022-04-01",
+                    "end_date": null,
+                    "description": "Designing and building payment processing APIs handling 1M+ transactions monthly. Implemented event-sourcing architecture for full audit trail. Achieved 99.99% uptime through careful system design."
+                },
+                {
+                    "company": "API Studio",
+                    "role": "Backend Developer",
+                    "start_date": "2019-08-01",
+                    "end_date": "2022-03-31",
+                    "description": "Built REST and GraphQL APIs for mobile and web clients. Implemented comprehensive test suites achieving 90%+ code coverage. Optimized database queries reducing average response time by 70%."
+                }
+            ],
+            "projects": [
+                {
+                    "title": "Open Banking API Gateway",
+                    "description": "Secure API gateway for banking integrations with OAuth 2.0, rate limiting, request validation, and detailed logging. Handles 500K+ API calls daily.",
+                    "tech_stack": ["Laravel", "MySQL", "Redis", "OAuth 2.0"],
+                    "demo_url": null,
+                    "repo_url": "https://github.com/khaledomar/banking-gateway",
+                    "is_featured": true
+                },
+                {
+                    "title": "Laravel Testing Toolkit",
+                    "description": "Package extending Laravel's testing utilities with helpers for API testing, database assertions, and mock factories. 2K+ Packagist downloads.",
+                    "tech_stack": ["PHP", "Laravel", "PHPUnit"],
+                    "demo_url": null,
+                    "repo_url": "https://github.com/khaledomar/laravel-testing-toolkit",
+                    "is_featured": false
+                }
+            ],
+            "testimonials": [
+                {
+                    "submitter_name": "Dina Rashid",
+                    "submitter_role": "Head of Engineering",
+                    "company": "Fintech Arabia",
+                    "message": "Khaled's backend work is some of the cleanest code I have ever reviewed. His APIs are well-designed, well-tested, and a pleasure to integrate with. Exactly the kind of engineer every team needs.",
+                    "rating": 5,
+                    "is_approved": true
+                }
+            ]
+        },
+
+        {
+            "name": "Laila Mahmoud",
+            "username": "laila_data",
+            "email": "laila.mahmoud@example.com",
+            "portfolio": {
+                "headline": "Data Scientist & ML Engineer",
+                "bio": "I bridge the gap between complex data and actionable business insights. Specializing in predictive modeling and NLP, I enjoy turning messy datasets into clear narratives.",
+                "location": "Giza, Egypt",
+                "social_links": {
+                    "github": "https://github.com/lailadata",
+                    "linkedin": "https://linkedin.com/in/lailamahmoud",
+                    "website": null
+                }
+            },
+            "skills": [
+                { "name": "Python",     "category": "Languages",   "proficiency": "Expert" },
+                { "name": "R",          "category": "Languages",   "proficiency": "Advanced" },
+                { "name": "SQL",        "category": "Languages",   "proficiency": "Expert" },
+                { "name": "PyTorch",    "category": "Frameworks",  "proficiency": "Advanced" },
+                { "name": "Scikit-Learn","category": "Frameworks",  "proficiency": "Expert" },
+                { "name": "Pandas",     "category": "Frameworks",  "proficiency": "Expert" },
+                { "name": "PostgreSQL", "category": "Databases",   "proficiency": "Advanced" },
+                { "name": "Tableau",    "category": "Tools",       "proficiency": "Advanced" },
+                { "name": "AWS SageMaker","category": "Tools",      "proficiency": "Intermediate" }
+            ],
+            "experiences": [
+                {
+                    "company": "Insight Analytics Egypt",
+                    "role": "Lead Data Scientist",
+                    "start_date": "2022-02-01",
+                    "end_date": null,
+                    "description": "Leading a team of 4 analysts to provide predictive modeling for retail clients. Developed a churn prediction model that increased customer retention by 22%."
+                },
+                {
+                    "company": "Smart Solutions Cairo",
+                    "role": "Data Analyst",
+                    "start_date": "2019-05-01",
+                    "end_date": "2022-01-31",
+                    "description": "Automated weekly reporting pipelines using Python, saving the department 20 hours of manual work per month. Created interactive dashboards for C-suite executives."
+                }
+            ],
+            "projects": [
+                {
+                    "title": "Arabic Sentiment Analyzer",
+                    "description": "An NLP tool trained specifically on Egyptian dialect for social media sentiment monitoring. Achieving 89% accuracy on test sets.",
+                    "tech_stack": ["Python", "PyTorch", "HuggingFace", "Flask"],
+                    "demo_url": "https://arabic-sentiment-demo.example.com",
+                    "repo_url": "https://github.com/lailadata/arabic-nlp",
+                    "is_featured": true
+                }
+            ],
+            "testimonials": [
+                {
+                    "submitter_name": "Mostafa Zein",
+                    "submitter_role": "CEO",
+                    "company": "Insight Analytics Egypt",
+                    "message": "Laila has a rare ability to explain complex statistical findings to stakeholders who aren't tech-savvy. Her work has fundamentally changed how we target our marketing.",
+                    "rating": 5,
+                    "is_approved": true
+                }
+            ]
+        },
+        {
+            "name": "Ziad Bakr",
+            "username": "ziad_sec",
+            "email": "ziad.bakr@example.com",
+            "portfolio": {
+                "headline": "Cybersecurity Engineer & Pen-Tester",
+                "bio": "Dedicated to securing the web one application at a time. I specialize in vulnerability assessment, incident response, and implementing Zero Trust architectures.",
+                "location": "Cairo, Egypt",
+                "social_links": {
+                    "github": "https://github.com/ziadsec",
+                    "linkedin": "https://linkedin.com/in/ziadbakr",
+                    "website": "https://ziad-security.io"
+                }
+            },
+            "skills": [
+                { "name": "Python",     "category": "Languages",   "proficiency": "Advanced" },
+                { "name": "Go",         "category": "Languages",   "proficiency": "Intermediate" },
+                { "name": "Bash",       "category": "Languages",   "proficiency": "Expert" },
+                { "name": "Metasploit", "category": "Tools",       "proficiency": "Expert" },
+                { "name": "Wireshark",  "category": "Tools",       "proficiency": "Expert" },
+                { "name": "Burp Suite", "category": "Tools",       "proficiency": "Expert" },
+                { "name": "Linux",      "category": "Tools",       "proficiency": "Expert" },
+                { "name": "Docker",     "category": "Tools",       "proficiency": "Advanced" }
+            ],
+            "experiences": [
+                {
+                    "company": "SecureNet Egypt",
+                    "role": "Senior Security Consultant",
+                    "start_date": "2021-08-01",
+                    "end_date": null,
+                    "description": "Conducting penetration tests for financial institutions. Spearheaded the 'Secure Code' initiative, reducing production vulnerabilities by 40% through developer training."
+                }
+            ],
+            "projects": [
+                {
+                    "title": "Vulnerability Scanner Bot",
+                    "description": "Automated script that scans CI/CD pipelines for common OWASP Top 10 vulnerabilities before deployment.",
+                    "tech_stack": ["Go", "Docker", "Python"],
+                    "demo_url": null,
+                    "repo_url": "https://github.com/ziadsec/scan-bot",
+                    "is_featured": true
+                }
+            ],
+            "testimonials": [
+                {
+                    "submitter_name": "Hassan Adel",
+                    "submitter_role": "IT Director",
+                    "company": "SecureNet Egypt",
+                    "message": "Ziad's insights saved us from a major data breach. His proactive approach to security is exactly what every modern tech company needs.",
+                    "rating": 5,
+                    "is_approved": true
+                }
+            ]
+        },
+        {
+            "name": "Mariam Ezzat",
+            "username": "mariam_uiux",
+            "email": "mariam.ezzat@example.com",
+            "portfolio": {
+                "headline": "UI/UX Designer & Frontend Developer",
+                "bio": "I believe that good design is invisible. I create user-centric interfaces that are not only beautiful but also highly functional and accessible.",
+                "location": "Alexandria, Egypt",
+                "social_links": {
+                    "github": "https://github.com/mariamezzat",
+                    "linkedin": "https://linkedin.com/in/mariamezzat",
+                    "website": "https://mariam.design"
+                }
+            },
+            "skills": [
+                { "name": "JavaScript", "category": "Languages",   "proficiency": "Advanced" },
+                { "name": "CSS3/SCSS",  "category": "Languages",   "proficiency": "Expert" },
+                { "name": "Figma",      "category": "Tools",       "proficiency": "Expert" },
+                { "name": "Adobe XD",   "category": "Tools",       "proficiency": "Expert" },
+                { "name": "React.js",   "category": "Frameworks",  "proficiency": "Advanced" },
+                { "name": "Tailwind CSS","category": "Frameworks",  "proficiency": "Expert" },
+                { "name": "Webflow",    "category": "Tools",       "proficiency": "Advanced" }
+            ],
+            "experiences": [
+                {
+                    "company": "Creative Minds Agency",
+                    "role": "Lead Product Designer",
+                    "start_date": "2020-01-01",
+                    "end_date": null,
+                    "description": "Redesigned the UI for Egypt's leading news portal, resulting in a 50% increase in average session duration. Leading a team of 3 designers."
+                }
+            ],
+            "projects": [
+                {
+                    "title": "Eco-Friendly Shopping App",
+                    "description": "A concept app design and prototype focused on sustainable consumerism. Awarded 'Best UX Concept' at a regional design summit.",
+                    "tech_stack": ["Figma", "React", "Framer Motion"],
+                    "demo_url": "https://eco-shop-proto.example.com",
+                    "repo_url": null,
+                    "is_featured": true
+                }
+            ],
+            "testimonials": [
+                {
+                    "submitter_name": "Layla Soliman",
+                    "submitter_role": "Product Owner",
+                    "company": "Creative Minds",
+                    "message": "Mariam has a unique talent for translating vague ideas into stunning, workable prototypes. Her attention to user psychology is fascinating.",
+                    "rating": 5,
+                    "is_approved": true
+                }
+            ]
+        },
+        {
+            "name": "Tarek Hegazi",
+            "username": "tarek_games",
+            "email": "tarek.hegazi@example.com",
+            "portfolio": {
+                "headline": "Game Developer — Unity & C#",
+                "bio": "Building immersive worlds and engaging gameplay mechanics. From mobile hyper-casual games to PC simulations, I love bringing stories to life through code.",
+                "location": "Cairo, Egypt",
+                "social_links": {
+                    "github": "https://github.com/tarekhegazi",
+                    "linkedin": "https://linkedin.com/in/tarekhegazi",
+                    "website": null
+                }
+            },
+            "skills": [
+                { "name": "C#",         "category": "Languages",   "proficiency": "Expert" },
+                { "name": "C++",        "category": "Languages",   "proficiency": "Intermediate" },
+                { "name": "Unity",      "category": "Frameworks",  "proficiency": "Expert" },
+                { "name": "Unreal Engine","category": "Frameworks",  "proficiency": "Intermediate" },
+                { "name": "Blender",    "category": "Tools",       "proficiency": "Advanced" },
+                { "name": "Photon SDK", "category": "Tools",       "proficiency": "Advanced" },
+                { "name": "Git",        "category": "Tools",       "proficiency": "Expert" }
+            ],
+            "experiences": [
+                {
+                    "company": "Pharaoh Games",
+                    "role": "Senior Gameplay Programmer",
+                    "start_date": "2021-01-01",
+                    "end_date": null,
+                    "description": "Developing core gameplay mechanics for an upcoming RPG title. Optimized rendering pipelines to maintain 60FPS on mid-range mobile devices."
+                }
+            ],
+            "projects": [
+                {
+                    "title": "Desert Racer 3D",
+                    "description": "A high-octane racing game featuring realistic physics and local multiplayer. 1M+ downloads on Play Store.",
+                    "tech_stack": ["Unity", "C#", "Blender"],
+                    "demo_url": "https://desert-racer.example.com",
+                    "repo_url": null,
+                    "is_featured": true
+                }
+            ],
+            "testimonials": [
+                {
+                    "submitter_name": "Sherif Ali",
+                    "submitter_role": "Studio Head",
+                    "company": "Pharaoh Games",
+                    "message": "Tarek's understanding of game physics and player feel is exceptional. He's a key reason our current project feels so polished.",
+                    "rating": 5,
+                    "is_approved": true
+                }
+            ]
+        },
+        {
+            "name": "Amira Younis",
+            "username": "amira_rails",
+            "email": "amira.younis@example.com",
+            "portfolio": {
+                "headline": "Ruby on Rails & Hotwire Enthusiast",
+                "bio": "I specialize in rapid prototyping and building clean, maintainable backends. I'm a big believer in 'The Rails Way' and the power of the monolith.",
+                "location": "Mansoura, Egypt",
+                "social_links": {
+                    "github": "https://github.com/amirayounis",
+                    "linkedin": "https://linkedin.com/in/amirayounis",
+                    "website": "https://amira.codes"
+                }
+            },
+            "skills": [
+                { "name": "Ruby",       "category": "Languages",   "proficiency": "Expert" },
+                { "name": "JavaScript", "category": "Languages",   "proficiency": "Advanced" },
+                { "name": "Ruby on Rails","category": "Frameworks",  "proficiency": "Expert" },
+                { "name": "Hotwire",    "category": "Frameworks",  "proficiency": "Advanced" },
+                { "name": "PostgreSQL", "category": "Databases",   "proficiency": "Expert" },
+                { "name": "Redis",      "category": "Databases",   "proficiency": "Advanced" },
+                { "name": "Heroku",     "category": "Tools",       "proficiency": "Advanced" },
+                { "name": "RSpec",      "category": "Tools",       "proficiency": "Expert" }
+            ],
+            "experiences": [
+                {
+                    "company": "Startup Launchpad",
+                    "role": "Lead Backend Developer",
+                    "start_date": "2020-03-01",
+                    "end_date": null,
+                    "description": "Helping early-stage startups build MVPs in record time. Successfully launched 4 products that went on to secure Seed funding."
+                }
+            ],
+            "projects": [
+                {
+                    "title": "Community Forum Engine",
+                    "description": "A lightweight, SEO-friendly forum engine built with Rails and Hotwire for real-time updates without the SPA complexity.",
+                    "tech_stack": ["Ruby on Rails", "Hotwire", "PostgreSQL"],
+                    "demo_url": "https://forum-engine-demo.example.com",
+                    "repo_url": "https://github.com/amirayounis/rails-forum",
+                    "is_featured": true
+                }
+            ],
+            "testimonials": [
+                {
+                    "submitter_name": "Yasmine Badawy",
+                    "submitter_role": "Founder",
+                    "company": "HealthTech Egypt",
+                    "message": "Amira built our entire MVP in 6 weeks. It's stable, fast, and remarkably easy for our new hires to understand. She is a powerhouse.",
+                    "rating": 5,
+                    "is_approved": true
+                }
+            ]
+        }
+    ]
+}
