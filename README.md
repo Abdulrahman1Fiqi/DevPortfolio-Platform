@@ -64,10 +64,10 @@
 
 <!-- Replace with your screenshot -->
 > 📷 **Screenshot needed:** Log in as a developer and visit `/dashboard` — take a screenshot of the full dashboard with analytics.
->
-> ```md
-> ![Developer Dashboard](screenshots/developer-dashboard.png)
-> ```
+
+
+![Developer Dashboard](screenshots/developer-dashboard.png)
+
 
 </details>
 
