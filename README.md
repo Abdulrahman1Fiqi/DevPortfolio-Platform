@@ -28,19 +28,13 @@
 
 ## 📸 Screenshots
 
-> **Add your screenshots here after running the project locally.**
-> Take screenshots of each section below and replace the placeholder text with the actual image.
 
 <details>
 <summary><b>🏠 Landing Page</b></summary>
 <br/>
 
-<!-- Replace with your screenshot -->
-> 📷 **Screenshot needed:** Run the app and visit `http://localhost:8000` — take a screenshot of the full landing page and add it here.
->
-> ```md
-> ![Landing Page](screenshots/landing.png)
-> ```
+![Landing Page](screenshots/landing.png)
+
 
 </details>
 
@@ -48,13 +42,8 @@
 <summary><b>📋 Developer Registration & Login</b></summary>
 <br/>
 
-<!-- Replace with your screenshot -->
-> 📷 **Screenshot needed:** Visit `/register` — take a screenshot showing the role picker (Developer / Recruiter cards).
->
-> ```md
-> ![Register](screenshots/register.png)
-> ![Login](screenshots/login.png)
-> ```
+![Register](screenshots/register.png)
+![Login](screenshots/login.png)
 
 </details>
 
@@ -62,12 +51,7 @@
 <summary><b>📊 Developer Dashboard</b></summary>
 <br/>
 
-<!-- Replace with your screenshot -->
-> 📷 **Screenshot needed:** Log in as a developer and visit `/dashboard` — take a screenshot of the full dashboard with analytics.
->
-> ```md
-> ![Developer Dashboard](screenshots/developer-dashboard.png)
-> ```
+![Developer Dashboard](screenshots/developer-dashboard.png)
 
 </details>
 
@@ -75,12 +59,8 @@
 <summary><b>🌐 Public Portfolio Page</b></summary>
 <br/>
 
-<!-- Replace with your screenshot -->
-> 📷 **Screenshot needed:** Visit `/portfolio/{username}` while logged out — take a screenshot of the full public portfolio.
->
-> ```md
-> ![Public Portfolio](screenshots/public-portfolio.png)
-> ```
+![Public Portfolio](screenshots/public-portfolio.png)
+
 
 </details>
 
@@ -88,12 +68,8 @@
 <summary><b>🔍 Developer Directory</b></summary>
 <br/>
 
-<!-- Replace with your screenshot -->
-> 📷 **Screenshot needed:** Visit `/developers` — take a screenshot of the developer directory with search.
->
-> ```md
-> ![Developer Directory](screenshots/directory.png)
-> ```
+![Developer Directory](screenshots/directory.png)
+
 
 </details>
 
@@ -101,12 +77,8 @@
 <summary><b>⭐ Testimonial Submission</b></summary>
 <br/>
 
-<!-- Replace with your screenshot -->
-> 📷 **Screenshot needed:** Visit a testimonial link `/testimonial/{token}` — take a screenshot of the star rating form.
->
-> ```md
-> ![Testimonial Form](screenshots/testimonial.png)
-> ```
+![Testimonial Form](screenshots/testimonial.png)
+
 
 </details>
 
@@ -114,24 +86,12 @@
 <summary><b>🛡️ Admin Panel</b></summary>
 <br/>
 
-<!-- Replace with your screenshot -->
-> 📷 **Screenshot needed:** Log in as admin (`admin@devportfolio.com`) and visit `/admin/dashboard`.
->
-> ```md
-> ![Admin Dashboard](screenshots/admin.png)
-> ```
+![Admin Dashboard](screenshots/admin.png)
+
 
 </details>
 
----
 
-> ### 💡 How to add screenshots to GitHub
-> 1. Create a folder called `screenshots/` in the root of your project
-> 2. Take your screenshots and save them there (PNG format)
-> 3. Add them to git: `git add screenshots/` → `git commit -m "docs: add screenshots"`
-> 4. Replace the placeholder text above with the actual markdown image links
-
----
 
 ## 📖 Table of Contents
 
