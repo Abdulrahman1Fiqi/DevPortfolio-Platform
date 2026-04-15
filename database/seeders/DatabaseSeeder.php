@@ -78,6 +78,7 @@ class DatabaseSeeder extends Seeder
                     'location'     => $dev['portfolio']['location'],
                     'is_published' => true,
                     'social_links' => $dev['portfolio']['social_links'],
+                    'testimonial_token' => Str::random(32),
                 ]
             );
 

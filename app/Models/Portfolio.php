@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Str;
 
 class Portfolio extends Model
 {
@@ -14,6 +15,7 @@ class Portfolio extends Model
         'avatar_path',
         'is_published',
         'social_links',
+        'testimonial_token',
     ];
 
     protected function casts(): array
@@ -62,6 +64,12 @@ class Portfolio extends Model
     }
 
     
+    protected static function booted(): void
+    {
+        static::creating(function (Portfolio $portfolio){
+            $portfolio->testimonial_token = Str::random(32);
+        });
+    }
 
 
 }

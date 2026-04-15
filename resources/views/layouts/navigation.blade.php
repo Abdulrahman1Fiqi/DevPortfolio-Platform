@@ -53,6 +53,12 @@
                             Analytics
                         </x-nav-link>
 
+                        <x-nav-link
+                            :href="route('developer.testimonials.index')"
+                            :active="request()->routeIs('developer.testimonials.*')">
+                            Testimonials
+                        </x-nav-link>
+
                         {{-- Connections with badge --}}
                         <a href="{{ route('developer.connections.index') }}"
                            class="inline-flex items-center gap-1.5 px-3 py-2 text-sm
@@ -76,6 +82,7 @@
                                 </span>
                             @endif
                         </a>
+
 
                     @elseif(auth()->user()->isRecruiter())
 

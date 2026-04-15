@@ -15,6 +15,8 @@ use App\Http\Controllers\Developer\AnalyticsController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Admin\PortfolioController as AdminPortfolioController;
+use App\Http\Controllers\Public\TestimonialController as PublicTestimonialController;
+use App\Http\Controllers\Developer\TestimonialController as DeveloperTestimonialController; 
 
 
 Route::get('/', function () {
@@ -33,6 +35,13 @@ Route::get('/developers',[DeveloperDirectoryController::class,'index'])
 Route::post('/connections/{username}',[RecruiterConnectionController::class,'store'])
         ->middleware(['auth','role:recruiter'])
         ->name('connections.store');
+
+Route::get('/testimonial/{token}',[PublicTestimonialController::class, 'show'])
+        ->name('testimonial.show');
+
+Route::post('/testimonial/{token}',[PublicTestimonialController::class, 'store'])
+        ->name('testimonial.store');
+
 
 // Developer routes
 
@@ -82,6 +91,18 @@ Route::middleware(['auth','role:developer'])
     Route::get('/analytics',[AnalyticsController::class, 'index'])
             ->name('analytics.index');
 
+   // Testimonials
+   Route::get('/testimonials',
+                [DeveloperTestimonialController::class,'index'])
+                ->name('testimonials.index');
+
+   Route::patch('/testimonials/{testimonial}/approve',
+                [DeveloperTestimonialController::class,'approve'])
+                ->name('testimonials.approve');
+
+   Route::delete('/testimonials/{testimonial}',
+                [DeveloperTestimonialController::class,'destroy'])
+                ->name('testimonials.destroy');
 });
 
 
