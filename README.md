@@ -614,28 +614,6 @@ test:     Adding or updating tests
 chore:    Build process, dependency updates
 ```
 
----
-
-## 📋 Roadmap
-
-- [ ] GitHub OAuth integration
-- [ ] Portfolio themes (multiple color schemes)
-- [ ] Export portfolio as PDF
-- [ ] Skill endorsements between developers
-- [ ] Real-time notifications with Laravel Echo
-- [ ] Portfolio view counter (public)
-- [ ] CSV export for analytics
-- [ ] Email notifications for new connection requests
-- [ ] Dark mode toggle
-- [ ] Portfolio custom domain support
-
----
-
-## 📄 License
-
-Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
-
----
 
 ## 📬 Contact
 
